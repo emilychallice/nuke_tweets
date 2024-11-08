@@ -20,4 +20,4 @@ You will also need to set your own header tokens in ```headers.txt``` for the us
 If you would like to preserve any specific tweets that fall within the cutoff date, enter these each on their own line in ```exempt_tweets.txt```.
 
 ## Usage
-Run ```nuke_tweets.py``` after completing setup.
+Run ```nuke_tweets.py``` after completing setup - it will prompt for a cutoff date, confirm, and then send requests for each tweet ID before the cutoff range.
