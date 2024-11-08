@@ -66,8 +66,12 @@ for tweet_id in tweet_ids:
     if (res.status_code == 200):
         print("Deleted successfully.")
         deleted_tweet_ids.append(tweet_id)
+    elif (res.status_code == 403):
+        print("Server responded with 403 FORBIDDEN. Make sure your headers.txt are set correctly!")
+        print("Exiting.")
+        sys.exit(0)
     else:
-        print("Error: Server responded with status code " + res.status_code)
+        print("Error: Server responded with status code " + str(res.status_code))
 
 print("\nDeleted " + str(len(deleted_tweet_ids)) + " tweets successfully.")
 print("Adding IDs of deleted tweets to exempt_tweets file for future...")
