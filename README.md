@@ -17,12 +17,15 @@ You will need to provide your own ```tweet-headers.js``` from downloading your T
 You will also need to set your own header tokens in ```headers.txt``` for the user session to work. These can be found in Chrome Devtools as shown below.
 
 The Authorization Bearer token can be found in the Headers of any request on the Network tab. You can also find the required X-Csrf and Cookie auth_token and ct0 values here.
+
 ![Cookie location under Chrome Devtools, Application, Storage. Highlights auth_token and ct0.](./imgs/loc_cookie.png)
 
 You can also (slightly more easily) copy the Cookie values from the Application tab. You may also note that the Cookie ct0 value is always the same as the X-Csrf token - still copy it in both places in ```headers.txt```.
+
 ![Authorization Bearer token location under Chrome Devtools, Network, any request headers.](./imgs/loc_headers.png)
 
 Make sure to preserve the semicolon in the Cookie header; it should look like
+
 ```Cookie: auth_token=YOUR_VALUE; ct0=YOUR_VALUE
 X-Csrf: YOUR_VALUE
 Authorization: Bearer YOUR_VALUE
