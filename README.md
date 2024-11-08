@@ -8,13 +8,15 @@ Use at your own risk! Only tested on my own account in batches of around 200 twe
 Latest version of Python3
 
 If it can't find a module, install with pip via command-line, e.g.
-```pip install requests
+```
+pip install requests
 ```
 
 ## Setup
-You will need to provide your own ```tweet-headers.js``` from downloading your Twitter archive. Copy and paste it in (overwrite the blank placeholder file).
+You will need to provide your own ```tweet-headers.js``` from downloading your Twitter archive. Copy and paste it into the main directory (overwrite the blank placeholder file). This file lists all your existing tweets with their IDs and creation dates. The ```tweets.js``` file has more info regarding their contents (useful for later versions of this tool).
+(The option to download your Twitter archive is available from Settings > Your account. 24-hour turnaround for a zipfile of all your data.)
 
-You will also need to set your own header tokens in ```headers.txt``` for the user session to work. These can be found in Chrome Devtools as shown below.
+You will also need to set your own request header tokens in ```headers.txt``` for the user session to work. These can be found in Chrome Devtools as shown below. Open Devtools while on Twitter and logged into the account that owns the posts to be deleted.
 
 The Authorization Bearer token can be found in the Headers of any request on the Network tab. You can also find the required X-Csrf and Cookie auth_token and ct0 values here.
 
@@ -25,8 +27,8 @@ You can also (slightly more easily) copy the Cookie values from the Application 
 ![Authorization Bearer token location under Chrome Devtools, Network, any request headers.](./imgs/loc_headers.png)
 
 Make sure to preserve the semicolon in the Cookie header; it should look like
-
-```Cookie: auth_token=YOUR_VALUE; ct0=YOUR_VALUE
+```
+Cookie: auth_token=YOUR_VALUE; ct0=YOUR_VALUE
 X-Csrf: YOUR_VALUE
 Authorization: Bearer YOUR_VALUE
 ```
