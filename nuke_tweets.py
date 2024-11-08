@@ -72,6 +72,7 @@ for tweet_id in tweet_ids:
         sys.exit(0)
     else:
         print("Error: Server responded with status code " + str(res.status_code))
+        sys.exit(1)
 
 print("\nDeleted " + str(len(deleted_tweet_ids)) + " tweets successfully.")
 print("Adding IDs of deleted tweets to exempt_tweets file for future...")
