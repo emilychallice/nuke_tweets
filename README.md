@@ -19,11 +19,11 @@ You will need to provide your own ```tweet-headers.js``` from downloading your T
 
 You will also need to set your own request header tokens in ```headers.txt``` for the user session to work. These can be found in Chrome Devtools as shown below. Open Devtools while on Twitter and logged into the account that owns the posts to be deleted.
 
-The Authorization Bearer token can be found in the Headers of any request on the Network tab. You can also find the required X-Csrf and Cookie auth_token and ct0 values here.
+The Authorization Bearer token can be found in the Headers of any request on the Network tab. You can also find the required X-Csrf and Cookie auth_token and ct0 values here (may have to click around different requests to find one with the Cookie data).
 
 ![Authorization Bearer token location under Chrome Devtools, Network, any request headers.](./imgs/loc_headers.png)
 
-You can also (slightly more easily) copy the Cookie values from the Application tab. You may also note that the Cookie ct0 value is always the same as the X-Csrf token - still copy it in both places in ```headers.txt```.
+You can also (perhaps more easily) copy the Cookie values from the Application tab. (click the >> for more tabs in Devtools). Note that the Cookie ct0 value is always the same as the X-Csrf token - make sure to copy it in both places in ```headers.txt```.
 
 ![Cookie location under Chrome Devtools, Application, Storage. Highlights auth_token and ct0.](./imgs/loc_cookie.png)
 
