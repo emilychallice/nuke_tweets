@@ -1,4 +1,5 @@
 import json
+import sys
 
 # Helper functions
 months_dict = {"Jan":1, "Feb":2, "Mar":3, "Apr":4,
@@ -14,9 +15,14 @@ def get_month_name(n):
 # Convert twitter-provided data to json
 with open("tweet-headers.js", 'r') as f:
     data_js = f.read()
-    data = json.loads( data_js.replace("window.YTD.tweet_headers.part0 =",
-                                       "{ \"window.YTD.tweet_headers.part0\" :")
-                                       + "}" )
+    try:
+        data = json.loads( data_js.replace("window.YTD.tweet_headers.part0 =",
+                                        "{ \"window.YTD.tweet_headers.part0\" :")
+                                        + "}" )
+    except:
+        print("Missing valid tweet-headers.js file - copy from your downloaded Twitter archive.")
+        print("Exiting...")
+        sys.exit(0)
 
 
 # Read exempt tweets (user-added and already-deleted)
