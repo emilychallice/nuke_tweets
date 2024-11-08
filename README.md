@@ -36,7 +36,7 @@ Authorization: Bearer YOUR_VALUE
 
 Extra headers are fine if you prefer to copy in the full headers, e.g. from another tool, as long as the required values are present.
 
-If you would like to preserve any specific tweets that fall within the cutoff date, enter these each on their own line in ```exempt_tweets.txt```.
+If you would like to preserve any specific tweets that fall within the cutoff date, enter these each by ID their own line in ```exempt_tweets.txt```. (The ID number of a tweet is the long number at the end of its URL. Alternatively, you can search the tweets.js file in your data archive.)
 
 The ```exempt_tweets.txt``` file is also automatically populated with deleted tweets after any batch deletion - this is for simplicity so that you can keep the same tweet-headers.js file if desired and avoid sending hundreds of requests for already-deleted tweets in future deletions. 
 
