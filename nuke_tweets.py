@@ -11,8 +11,8 @@ url = "https://x.com/i/api/graphql/VaenaVgh5q5ih7kvyVjgtg/DeleteTweet"
 headers_dict = {}
 with open("request_headers.txt", 'r') as f:
     for line in f.readlines():
-        header = line.strip().split(": ")
-        headers_dict[header[0]] = header[1]
+        header = line.strip().split(":")
+        headers_dict[header[0]] = header[1].strip()
 
 s = requests.Session()
 for header in headers_dict.keys():
