@@ -23,7 +23,7 @@ The Authorization Bearer token can be found in the Headers of any request on the
 
 ![Authorization Bearer token location under Chrome Devtools, Network, any request headers.](./imgs/loc_headers.png)
 
-You can also (perhaps more easily) copy the Cookie values from the Application tab. (click the >> for more tabs in Devtools). Note that the Cookie ct0 value is always the same as the X-Csrf token - make sure to copy it in both places in ```headers.txt```.
+You can also (perhaps more easily) copy the Cookie values from the Application tab (click the >> for more tabs in Devtools). Note that the Cookie ct0 value is always the same as the X-Csrf token - make sure to copy it in both places in ```headers.txt```.
 
 ![Cookie location under Chrome Devtools, Application, Storage. Highlights auth_token and ct0.](./imgs/loc_cookie.png)
 
