@@ -10,7 +10,7 @@ url = "https://x.com/i/api/graphql/VaenaVgh5q5ih7kvyVjgtg/DeleteTweet"
 # Read and set headers
 headers_dict = {}
 with open("request_headers.txt", 'r') as f:
-    for line in f.readlines():
+    for line in f.read().splitlines():
         header = line.strip().split(":")
         headers_dict[header[0]] = header[1].strip()
 
