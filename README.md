@@ -2,7 +2,7 @@
 Tool for mass-deleting tweets.
 
 ## Disclaimer
-Use at your own risk! Only tested on my own account in batches of around 200 tweets. More testing & expansion of the guide and functionality to come.
+Use at your own risk! Only tested on my own account with batch sizes up to ~500 tweets. More testing & expanded functionality to come.
 
 ## Requirements
 Latest version of Python3
