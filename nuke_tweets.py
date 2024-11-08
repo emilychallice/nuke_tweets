@@ -67,7 +67,7 @@ for tweet_id in tweet_ids:
         print("Deleted successfully.")
         deleted_tweet_ids.append(tweet_id)
     elif (res.status_code == 403):
-        print("Server responded with 403 FORBIDDEN. Make sure your headers.txt are set correctly!")
+        print("Server responded with 403 FORBIDDEN. Make sure your request_headers.txt are set correctly!")
         print("Exiting.")
         sys.exit(0)
     else:
