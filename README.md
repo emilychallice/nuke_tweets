@@ -14,6 +14,7 @@ pip install requests
 
 ## Setup
 You will need to provide your own ```tweet-headers.js``` from downloading your Twitter archive. Copy and paste it into the main directory (overwrite the blank placeholder file). This file lists all your existing tweets with their IDs and creation dates. The ```tweets.js``` file has more info regarding their contents (useful for later versions of this tool).
+
 (The option to download your Twitter archive is available from Settings > Your account. 24-hour turnaround for a zipfile of all your data.)
 
 You will also need to set your own request header tokens in ```headers.txt``` for the user session to work. These can be found in Chrome Devtools as shown below. Open Devtools while on Twitter and logged into the account that owns the posts to be deleted.
