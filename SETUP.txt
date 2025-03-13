@@ -1,0 +1,8 @@
+[HEADERS]
+X-CSRF Token: YOUR_TOKEN
+Authorization Token: Bearer YOUR_TOKEN
+Cookie auth_token: YOUR_TOKEN
+
+[EXEMPTIONS]
+YOUR_EXEMPT_TWEET_ID_1
+YOUR_EXEMPT_TWEET_ID_2
